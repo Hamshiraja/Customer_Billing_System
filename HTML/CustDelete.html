@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Customer Deletion Program</title>
+<link rel="stylesheet" type="text/css" href="../CSS/style1.css">
+<script language = "javascript">
+
+
+function formValidation(thisform)
+{
+with(thisform)
+{
+if (custnoValidation(custno) == false) 
+{
+return false;
+}
+}
+}
+
+function custnoValidation(custno) 
+{
+with(document.form1)
+{
+if(custno.value=="")
+{
+alert(" Customer Number is not entered");
+custno.focus();
+return false;
+}
+else
+{
+var cno = (custno.value).length;
+if(cno!=8)
+{
+alert("Customer Number should 8 character length");
+custno.focus();
+custno.value = "";
+return false;
+}
+else
+return true;
+}
+}
+}
+</script>
+</head>
+<body>
+<h4>Customer Billing System</h4>
+<form name = "form1" method =POST action= "../PHP/CustDelete.php" onSubmit = "return formValidation(this)">
+
+<table>
+<caption><u><h2>Delete Customer Data</h2></u></caption>
+
+<tr>
+<th> Customer Number:</th>
+<td><input type =text name = custno></td>
+</tr>
+
+
+<tr>
+<td><button type =Submit> Delete</button>
+</tr>
+<tr>
+<td><button type = Reset>Clear</button></td>
+</tr>
+
+<tr></tr>
+<tr></tr>
+<tr></tr>
+
+<tr>
+<td></td>
+<td>
+<a  href =../HTML/CustAdd.html>Add</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a  href =../HTML/CustEdit.html>Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a  href =../HTML/CustView.html>View</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td></tr>
+
+</table>
+</form>
+</body>
+
+</html>
+
+
