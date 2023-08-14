@@ -47,16 +47,19 @@ The custview.html file provides a way to view the payment records stored in the 
 
 The custview.php file retrieves the payment records from the database and presents them to the user.
 
-Validation Checks:
+**Validation Checks:**
 
 Customer Number:
 
 Cannot be blank.
 Must be 8 characters long.
+
+
 Code:
 
 Cannot be blank.
 Must be either 'C' (Commercial) or 'D' (Domestic).
+
 Units:
 
 Cannot be blank.
@@ -72,6 +75,7 @@ Units 6 to 25: 5/- per unit
 Units 26 to 50: 10/- per unit
 Units 51 to 75: 15/- per unit
 Units above 75: 25/- per unit
+
 For Domestic (D) Customers:
 
 Units 1 to 10: Free of charge
@@ -79,6 +83,7 @@ Units 11 to 25: 3/- per unit
 Units 26 to 50: 6/- per unit
 Units 51 to 75: 9/- per unit
 Units above 75: 15/- per unit
+
 Usage:
 
 Clone or download this repository to your local machine.
